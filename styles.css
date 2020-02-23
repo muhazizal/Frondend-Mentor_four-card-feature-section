@@ -1,0 +1,135 @@
+/* Declare colors variable */
+:root {
+  --box-red: hsl(0, 78%, 62%);
+  --box-cyan: hsl(180, 62%, 55%);
+  --box-orange: hsl(34, 97%, 64%);
+  --box-blue: hsl(212, 86%, 64%);
+  --title: hsl(234, 12%, 34%);
+  --paragraph: hsl(229, 6%, 66%);
+}
+
+/* Element Section */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: hsl(0, 0%, 98%);
+  font-size: 15px;
+}
+
+h2 {
+  margin: 0;
+  color: var(--title);
+}
+
+p {
+  color: var(--paragraph);
+}
+
+img {
+  float: right;
+  margin-top: 15px;
+}
+
+/* Heading Section */
+.heading {
+  text-align: center;
+  color: var(--title);
+}
+
+.heading-thin {
+  font-weight: lighter;
+  margin: 50px 0 0 0;
+}
+
+.heading-bold {
+  font-weight: bold;
+  margin: 0 0 30px 0;
+}
+
+.sub-heading {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+/* Container Section */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Card Section */
+.card {
+  background-color: #fff;
+  width: 300px;
+  height: 190px;
+  padding: 30px;
+  border-radius: 8px;
+  margin: 20px;
+  box-shadow: 0px 10px 15px 0px hsl(232, 100%, 92%);
+}
+
+#cyan-card {
+  border-top: 5px solid var(--box-cyan);
+}
+
+#red-card {
+  border-top: 5px solid var(--box-red);
+}
+
+#orange-card {
+  border-top: 5px solid var(--box-orange);
+}
+
+#blue-card {
+  border-top: 5px solid var(--box-blue);
+}
+
+/* Attribute Section */
+.attribution { 
+  margin-top: 50px;
+  font-size: 11px;
+  text-align: center; 
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%);
+}
+
+/* Large devices min 1233px */
+@media only screen and (min-width: 1217px) {
+  
+  /* Change Flex Container to Grid System */
+  .container {
+    display: grid;
+  }
+
+  .container #cyan-card, 
+  .container #blue-card {
+    grid-row: 1 / span 2;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .container #cyan-card {
+    grid-column: 1;
+  }
+  
+  .container #red-card {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+  }
+
+  .container #orange-card {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+  }
+
+  .container #blue-card {
+    grid-column: 3;
+  }
+
+}
