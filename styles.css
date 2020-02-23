@@ -52,8 +52,8 @@ img {
   margin-bottom: 50px;
 }
 
-/* Flex Container Section */
-.flex-container {
+/* Container Section */
+.container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -62,7 +62,6 @@ img {
 /* Card Section */
 .card {
   background-color: #fff;
-  display: inline-block;
   width: 300px;
   height: 190px;
   padding: 30px;
@@ -99,19 +98,38 @@ img {
 }
 
 /* Large devices min 1233px */
-@media only screen and (min-width: 1233px) {
+@media only screen and (min-width: 1217px) {
   
   /* Change Flex Container to Grid System */
-  .flex-container {
+  .container {
     display: grid;
-    grid-template-columns: auto auto auto;
-    justify-items: center;
   }
 
-  .flex-container #cyan-card, 
-  .flex-container #blue-card {
-    grid-column-start: 1;
-    grid-column-end: 4;
+  .container #cyan-card, 
+  .container #blue-card {
+    grid-row: 1 / span 2;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .container #cyan-card {
+    grid-column: 1;
+  }
+  
+  .container #red-card {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+  }
+
+  .container #orange-card {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+  }
+
+  .container #blue-card {
+    grid-column: 3;
   }
 
 }
