@@ -103,12 +103,20 @@ img {
   /* Change Flex Container to Grid System */
   .container {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 
   .container #cyan-card, 
   .container #blue-card {
-    grid-row: 1 / span 2;
+    grid-row: 1/3;
     align-self: center;
+    justify-self: center;
+  }
+
+  .container #red-card,
+  .container #orange-card {
+    grid-column: 2;
     justify-self: center;
   }
 
@@ -117,15 +125,11 @@ img {
   }
   
   .container #red-card {
-    grid-column: 2;
     grid-row: 1;
-    justify-self: center;
   }
 
   .container #orange-card {
-    grid-column: 2;
     grid-row: 2;
-    justify-self: center;
   }
 
   .container #blue-card {
